@@ -9,4 +9,5 @@ funct main(){
 	upass:="Admin"
 	encrypass,_:=bcrypt.GenerateFromPassword([]byte(upass),1)
 	fmt.Println(encrypass)
+	err:=bcrypt.CompareHashAndPassword(encrypass,[])
 }
